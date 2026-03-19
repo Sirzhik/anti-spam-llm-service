@@ -1,0 +1,10 @@
+services:
+  spam-check:
+    build: .
+    image: a-spam-mail:latest
+    container_name: a-spam-check
+    env_file:
+      - .env.example
+    ports:
+      - "9804:9804"
+      
